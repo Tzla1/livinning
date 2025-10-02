@@ -79,27 +79,6 @@ const categories: PropertyCategory[] = [
     emojiFile: 'office_building_3d.png',
     color: 'from-blue-bright to-blue-violet',
   },
-  {
-    id: 'bank-foreclosure',
-    name: 'Remates Bancarios',
-    emojiFolder: 'Bank',
-    emojiFile: 'bank_3d.png',
-    color: 'from-coral-red to-pink-vibrant',
-  },
-  {
-    id: 'large-estate',
-    name: 'Latifundios',
-    emojiFolder: 'Tractor',
-    emojiFile: 'tractor_3d.png',
-    color: 'from-gold-yellow to-blue-bright',
-  },
-  {
-    id: 'major-works',
-    name: 'Grandes Obras',
-    emojiFolder: 'Building construction',
-    emojiFile: 'building_construction_3d.png',
-    color: 'from-purple-vibrant to-blue-violet',
-  },
 ];
 
 export function PropertyCategoryCarousel() {
@@ -114,9 +93,9 @@ export function PropertyCategoryCarousel() {
       }}
       className="w-full relative"
     >
-      <CarouselContent className="-ml-3 md:-ml-4">
+      <CarouselContent className="-ml-3 md:-ml-4 -mr-3 md:-mr-4">
         {categories.map((category) => {
-          const isSelected = selectedCategory === category.id;
+          const isSelected = selec  tedCategory === category.id;
           const fluentEmojiUrl = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${category.emojiFolder}/3D/${category.emojiFile}`;
 
           return (
