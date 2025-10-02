@@ -23,6 +23,7 @@ const vertiga = localFont({
     },
   ],
   variable: "--font-vertiga",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -38,8 +39,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="es">
-        <body className={`${vertiga.variable} antialiased`}>
+      <html lang="es" className={vertiga.variable}>
+        <body className="antialiased">
           {children}
           <Toaster />
         </body>
