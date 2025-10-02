@@ -63,6 +63,12 @@ export default function HomePage() {
                   Explorar Propiedades
                 </Button>
               </Link>
+              <Link href="/dashboard/user">
+                <Button size="lg" variant="outline" className="h-14 px-8 text-base border-2 hover:bg-primary-50">
+                  <BarChart3 className="mr-2 h-5 w-5" />
+                  Ir al Panel
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

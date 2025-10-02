@@ -7,8 +7,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import { Home, Building, Info, Phone } from 'lucide-react';
+import { Home, Building, Info, Phone, LayoutDashboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'motion/react';
 
 export function Navbar() {
   return (
@@ -83,6 +84,17 @@ export function Navbar() {
             </SignUpButton>
           </SignedOut>
           <SignedIn>
+            <Link href="/dashboard/user">
+              <Button variant="ghost" size="sm" className="gap-2 group">
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  <LayoutDashboard className="h-4 w-4" />
+                </motion.div>
+                <span className="hidden sm:inline">Panel</span>
+              </Button>
+            </Link>
             <UserButton
               afterSignOutUrl="/"
               appearance={{
